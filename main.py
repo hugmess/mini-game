@@ -1,14 +1,30 @@
-from character import Character, Berserk
+from character import Character, Berserk, Assassin, Samurai, Ninja, Vampyre
 
 player_1 = Character(name = "Yoru", damage=2)
 print(player_1.stats())
 player_2 = Berserk(name = "Nica", hp=20, damage=3)
 print(player_2.stats())
+player_3 = Assassin(name = "Killjoy", hp=25, damage=3)
+print(player_3.stats())
+player_4 = Samurai(name = "Jett", hp=25, damage=3)
+print(player_4.stats())
+player_5 = Ninja(name = "Omen", hp=20, damage=3)
+print(player_5.stats())
+player_6 = Vampyre(name = "Cypher", hp=30, damage=2)
+print(player_6.stats())
 
 for i in range(3):
     print (f" -- РАУНД {i+1} ")
     player_1.attack(player_2)
     player_2.attack(player_1)
+    player_3.attack(player_4)
+    player_4.attack(player_3)
+    player_5.attack(player_6)
+    player_6.attack(player_5)
 
     print(player_1.stats())
     print(player_2.stats())
+    print(player_3.stats())
+    print(player_4.stats())
+    print(player_5.stats())
+    print(player_6.stats())
